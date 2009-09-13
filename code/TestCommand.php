@@ -2,14 +2,13 @@
 
 class TestCommand extends ControllerCommand {
 	
-	private $message     = '';
-	private $messageType = 'good';
-	
-	
 	/**
 	 *
 	 */
 	public function execute() {
-	}
-	
+		$data = $this->getParameters();
+		$x = $data['x'];
+		$y = $data['y'];
+		return (int)$x * (int) $y;
+	}	
 }
