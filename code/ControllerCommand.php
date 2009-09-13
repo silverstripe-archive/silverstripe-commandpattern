@@ -15,7 +15,14 @@ abstract class ControllerCommand extends Object implements ICommand {
 		$this->controller = $controller;
 		$this->setParameters($params);
 	}
-	
+
+	/**
+	 * 
+	 */
+	public function getController() {
+		return $this->controller;
+	}
+		
 	/**
 	 * 
 	 */
