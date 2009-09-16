@@ -1,6 +1,13 @@
 <?php
 /**
+ * @package commands
+ * @subpackage code
+ * @author Rainer Spittel (rainer at silverstripe dot com)
  *
+ * The command factory class provides a method to initiate a command object.
+ * The factory class checks for all available ICommand implementations 
+ * (@see ICommand) and initiate the command object. If the requested command
+ * name is not available, the factory class will throw an exception.
  */
 class CommandFactory extends Object {
 
@@ -10,7 +17,8 @@ class CommandFactory extends Object {
 	 * @param String $commandName
 	 * @param Controller $controller
 	 *
-	 * @return  ControllerCommand
+	 * @return ControllerCommand
+	 * @throws CommandFactory_Exception
 	 */
 	static function get_command($commandName, $controller=null, $params = null) {
 		$command = null;
@@ -27,7 +35,9 @@ class CommandFactory extends Object {
 	}
 }
 
-class CommandFactory_Exception extends Exception {
-}
-
-?>
+/**
+ * Customised exception class, thrown by the command factory class only.
+ *
+ * @link CommandFactory
+ */
+class CommandFactory_Exception extends Exception {}

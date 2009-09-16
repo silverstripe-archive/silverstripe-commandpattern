@@ -1,6 +1,14 @@
 <?php
 /**
+ * @package commands
+ * @subpackage code
+ * @author Rainer Spittel (rainer at silverstripe dot com)
  *
+ * This extension class enables the usage of the static get_command method
+ * via the controller class itself which passes in the controller parameter
+ * to the factory class. 
+ *
+ * @link see CommandFactory for more details
  */
 class CommandControllerExtension extends Extension {
 
@@ -17,7 +25,7 @@ class CommandControllerExtension extends Extension {
 	function getCommand($commandName, $data = null) {
 
 		if($data && !is_array($data)) {
-			throw new CommandControllerException('Invalid command parameters');
+			throw new CommandControllerException('Invalid command parameters.');
 		}
 		
 		try {
@@ -31,4 +39,9 @@ class CommandControllerExtension extends Extension {
 	}
 }
 
+/**
+ * Customised exception class, thrown by the command controller class only.
+ *
+ * @link CommandControllerExtension
+ */
 class CommandControllerException extends Exception {};
