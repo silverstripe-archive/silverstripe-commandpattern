@@ -20,19 +20,18 @@ class CommandControllerExtension extends Extension {
 	 *        structure is specific to the command.
 	 *
 	 * @return ControllerCommand the requested command.
-	 * @throws CommandControllerException
+	 * @throws CommandController_Exception
 	 */
 	function getCommand($commandName, $data = null) {
-
 		if($data && !is_array($data)) {
-			throw new CommandControllerException('Invalid command parameters.');
+			throw new CommandController_Exception('Invalid command parameters.');
 		}
 		
 		try {
 			$command = CommandFactory::get_command($commandName,$this->owner, $data);
 		} 
 		catch (CommandFactory_Exception $e) {
-			throw new CommandControllerException( $e->getMessage() );
+			throw new CommandController_Exception( $e->getMessage() );
 		}
 
 		return $command;
@@ -44,4 +43,4 @@ class CommandControllerExtension extends Extension {
  *
  * @link CommandControllerExtension
  */
-class CommandControllerException extends Exception {};
+class CommandController_Exception extends Exception {};
