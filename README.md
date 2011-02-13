@@ -1,4 +1,4 @@
-# smappy Module
+# SilverStripe Commands Module
 
 ## Maintainer Contact
 
@@ -10,11 +10,10 @@
 
 ## Documentation
 
-The commands module implements the command pattern and enables the decoupling
-of business logic from controller/data object classes. Each business logic is
-captured in single commands which can be executed.
+The commands module implements the command design pattern. It enables SilverStripe to decouple
+business logic from the MVC structure. Commands can be executed individually and have a controller reference.
 
-To install this module, please check out the version, copy the commands folder
+To install this module, please clone this module, copy the commands folder
 into the root folder of the SilverStripe installation and run a dev/build, i.e.:
 
   http://localhost/silverstripe/dev/build
