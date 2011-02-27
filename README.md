@@ -1,4 +1,4 @@
-# SilverStripe Commands Module
+# SilverStripe Command Pattern Module
 
 ## Maintainer Contact
 
@@ -10,8 +10,7 @@
 
 ## Documentation
 
-The commands module implements the command design pattern. It enables SilverStripe to decouple
-business logic from the MVC structure. Commands can be executed individually and have a controller reference.
+The commandpattern module enables SilverStripe to decouple business logic from the MVC structure. Commands can be executed individually and have a reference to a calling controller.
 
 To install this module, please clone this module, copy the commands folder
 into the root folder of the SilverStripe installation and run a dev/build, i.e.:
