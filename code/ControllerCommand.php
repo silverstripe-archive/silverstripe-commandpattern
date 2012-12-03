@@ -21,7 +21,7 @@ abstract class ControllerCommand extends Object implements ICommand {
 	 * object is optional and depends on the individual implementation of the 
 	 * command class. The $params parameter is a property array which can be 
 	 * used to pass in parameters for the command.
-	
+	 *
 	 * @param $controller Controller a reference to the calling controller. 
 	 * @param $params array 
 	 */
