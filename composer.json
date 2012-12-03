@@ -1,0 +1,16 @@
+{
+	"name": "silverstripe/commandpattern",
+	"description": "This module implement the commands design pattern and will be attached to controller classes.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "commandpattern"],
+	"authors": [
+	{
+		"name": "Rainer Spittel",
+		"email": "fb3rasp@gmail.com"
+	}
+	],
+	"require":
+	{
+		"silverstripe/framework": "3.*"
+	}
+}
