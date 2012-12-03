@@ -1,0 +1,18 @@
+{
+	"name": "silverstripe-labs/commandpattern",
+	"description": "The commandpattern module enables SilverStripe to decouple
+		business logic from the MVC structure. Commands can be executed individually
+		and have a reference to a calling controller.",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe-labs", "commandpattern"],
+	"authors": [
+	{
+		"name": "Rainer Spittel",
+		"email": "rainer@silverstripe.com"
+	}
+	],
+	"require":
+	{
+		"silverstripe/framework": "2.4.*"
+	}
+}
