@@ -2,6 +2,7 @@
 	"name": "silverstripe/commandpattern",
 	"description": "The commandpattern module enables SilverStripe to decouple business logic from the MVC structure.",
 	"type": "silverstripe-module",
+	"license": "BSD-3-Clause",
 	"keywords": ["silverstripe", "commandpattern"],
 	"authors": [{
 		"name": "Rainer Spittel",
