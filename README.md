@@ -2,11 +2,11 @@
 
 ## Maintainer Contact
 
- * Rainer Spittel (Nickname: fb3rasp) - rainer (at) silverstripe (dot) com
+ * Rainer Spittel (Nickname: fb3rasp) - fb3rasp (at) gmail (dot) com
 
 ## Requirements
 
- * SilverStripe V2.4
+ * SilverStripe V3.0
 
 ## Documentation
 
@@ -49,7 +49,7 @@ First create the command class in your project folder:
 
 ## Installation Instructions
 
-Add this module into your project folder (name mapping) and run a dev/build
+Add this module into your project folder (name commandpattern) and run a dev/build
 to generate the required database schema.
 
 ## Usage Overview
