@@ -10,32 +10,33 @@
  *
  * @link see CommandFactory for more details
  */
-class CommandControllerExtension extends Extension {
+class CommandControllerExtension extends Extension
+{
 
-	/**
-	 * Returns the requested command and assigns the controller class to its
-	 * owner/caller. See @link CommandFactory for more details.
-	 * @param $commandName string name of the command
-	 * @param $data array|null list of parameters for the command. The array
-	 *        structure is specific to the command.
-	 *
-	 * @return ControllerCommand the requested command.
-	 * @throws CommandController_Exception
-	 */
-	function getCommand($commandName, $data = null) {
-		if($data && !is_array($data)) {
-			throw new CommandController_Exception('Invalid command parameters.');
-		}
-		
-		try {
-			$command = CommandFactory::get_command($commandName,$this->owner, $data);
-		} 
-		catch (CommandFactory_Exception $e) {
-			throw new CommandController_Exception( $e->getMessage() );
-		}
+    /**
+     * Returns the requested command and assigns the controller class to its
+     * owner/caller. See @link CommandFactory for more details.
+     * @param $commandName string name of the command
+     * @param $data array|null list of parameters for the command. The array
+     *        structure is specific to the command.
+     *
+     * @return ControllerCommand the requested command.
+     * @throws CommandController_Exception
+     */
+    public function getCommand($commandName, $data = null)
+    {
+        if ($data && !is_array($data)) {
+            throw new CommandController_Exception('Invalid command parameters.');
+        }
+        
+        try {
+            $command = CommandFactory::get_command($commandName, $this->owner, $data);
+        } catch (CommandFactory_Exception $e) {
+            throw new CommandController_Exception($e->getMessage());
+        }
 
-		return $command;
-	}
+        return $command;
+    }
 }
 
 /**
@@ -43,4 +44,6 @@ class CommandControllerExtension extends Extension {
  *
  * @link CommandControllerExtension
  */
-class CommandController_Exception extends Exception {};
+class CommandController_Exception extends Exception
+{
+};
