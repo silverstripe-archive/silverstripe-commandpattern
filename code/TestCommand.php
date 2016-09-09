@@ -11,15 +11,17 @@
  *
  * Please see the README file for more information.
  */
-class TestCommand extends ControllerCommand {
-	
-	/**
-	 * Perform the action/command
-	 */
-	public function execute() {
-		$data = $this->getParameters();
-		$x = $data['x'];
-		$y = $data['y'];
-		return (int)$x * (int) $y;
-	}	
+class TestCommand extends ControllerCommand
+{
+    
+    /**
+     * Perform the action/command
+     */
+    public function execute()
+    {
+        $data = $this->getParameters();
+        $x = $data['x'];
+        $y = $data['y'];
+        return (int)$x * (int) $y;
+    }
 }

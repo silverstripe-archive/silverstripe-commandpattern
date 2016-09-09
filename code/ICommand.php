@@ -12,19 +12,20 @@
  *
  * @link CommandFactory @link ControllerCommand
  */
-interface ICommand {
+interface ICommand
+{
 
-	/**
-	 * This method performs the action/command. No parameters should be passed
-	 * into this method call. If additional parameters are required, use the 
-	 * constructor parameters or a dedicated setter method. To provide an 
-	 * non-parameterized method call to perform an action enables the use of
-	 * the command-history pattern.
-	 */
-	public function execute();
+    /**
+     * This method performs the action/command. No parameters should be passed
+     * into this method call. If additional parameters are required, use the 
+     * constructor parameters or a dedicated setter method. To provide an 
+     * non-parameterized method call to perform an action enables the use of
+     * the command-history pattern.
+     */
+    public function execute();
 
-	/**
-	 * Each command should support a toString function to enable a command logging.
-	 */
-	public function toString();
+    /**
+     * Each command should support a toString function to enable a command logging.
+     */
+    public function toString();
 }
